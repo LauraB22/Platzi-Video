@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel</title>
+</head>
+
+<style>
+    body{
+        margin: 0px;
+    }
+    .carrusel{
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative;
+    }
+    .carrusel__container{
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+    .carrusel-item{
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: plum;
+        overflow: hidden;
+        margin: 10px;
+        display: inline-block;
+        transition: 450ms all;
+        transform-origin: center le;
+    }
+    .carrusel-item:hover ~ .carrusel-item{
+        transform: translate3d(100px 0 0);
+    }
+    .carrusel__container:hover .carrusel-item{
+        opacity: 0.3;
+    }
+    .carrusel__container:hover .carrusel-item:hover{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    .carrusel-item__img{
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+        position: relative;
+    }
+    .carrusel-item__details{
+        background: linear-gradient(to top, rgba(0 0 0 0.9)0%, rgba(0 0 0 0)100%);
+        font-size: 10px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .carrusel-item__details img {
+    width: 20px;
+}
+.carrusel-item:hover .carusel-item__details {
+    opacity: 1;
+}
+.carrusel-item__details--botones img{
+    width: 30px;
+    height: 30px;
+}
+.carrusel-item__details--Titulo {
+    color: white;
+    margin: 5px 0px 0px 0px;
+}
+.carrusel-item__details--subtitulo {
+    color: white;
+    font-size: 8px;
+    margin: 3px 0px;
+}
+</style>
+
+<body>
+    <section class="carrusel">
+        <div class="carrusel__container">
+            <div class="carrusel-item">
+                <img class="carrusel-item__img" src="https://images.pexels.com/photos/7825917/pexels-photo-7825917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Girl">
+                <div class="carrusel-item__details">
+                    <div>
+                        <img src="boton-de-play.png" alt="">
+                        <img src="mas.png" alt="">
+                    </div>
+                </div>
+                <p class="carrusel-item__details--Titulo">Título descriptivo</p>
+                <p class="carrusel-item__details--sutitulo">2021 16+ 114min</p>
+            </div>
+            <div class="carrusel-item">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
