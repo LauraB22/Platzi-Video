@@ -1,0 +1,113 @@
+body {
+    margin: 0px;
+   /* background-color:  #21C08B;*/
+    font-family: 'Muli', sans-serif;
+    background-color: #CA60F3;
+}
+.header {
+    background-color: #CA60F3;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__img{
+    width: 200px;
+    margin-left: 30px;
+}
+.header__img{
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/*Pagina de error*/
+.error{
+    background: linear-gradient(#CA60F3, #60D2F3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    color: var(--light-mode);
+    min-height: calc(100vh - 140px);
+}
+
+.error img{
+    width: 300px;
+    display: block;
+animation: animates 2s linear infinite alternate;
+}
+.error h1{
+    text-align: center;
+    font-size: 5.5rem;
+    font-weight: 600;
+    top: 9rem;
+    color: rgba(24, 53, 61,.5)
+}
+.error h3{
+    color: rgba(24, 53, 61, 0.7);
+    margin: 2em auto;
+    animation: animatestext 2s linear infinite alternate;
+}
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+.animationPulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+.animatedPulseRepeat  {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+
+@media all and (max-width: 680px) {
+    .error404__content {
+    width: 100%;
+    height: 55px;
+    clear: both;
+    margin: 0px auto;
+   
+  }
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #60D2F3;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #60D2F3;
+}
+.footer a{
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+@media only screen and (max-width: 600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;
+    }
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
